@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		202C5E6B2448954200D0691B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5E6A2448954200D0691B /* CoreDataManager.swift */; };
+		202C5EA72448AC1400D0691B /* Addiction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EA12448AC1400D0691B /* Addiction+CoreDataClass.swift */; };
+		202C5EA82448AC1400D0691B /* Addiction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EA22448AC1400D0691B /* Addiction+CoreDataProperties.swift */; };
+		202C5EA92448AC1400D0691B /* Trigger+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EA32448AC1400D0691B /* Trigger+CoreDataClass.swift */; };
+		202C5EAA2448AC1400D0691B /* Trigger+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EA42448AC1400D0691B /* Trigger+CoreDataProperties.swift */; };
+		202C5EAB2448AC1400D0691B /* Relapse+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EA52448AC1400D0691B /* Relapse+CoreDataClass.swift */; };
+		202C5EAC2448AC1400D0691B /* Relapse+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EA62448AC1400D0691B /* Relapse+CoreDataProperties.swift */; };
 		20A8A9682447CEC9007F4AE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8A9672447CEC9007F4AE4 /* AppDelegate.swift */; };
 		20A8A96A2447CEC9007F4AE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8A9692447CEC9007F4AE4 /* SceneDelegate.swift */; };
 		20A8A96C2447CEC9007F4AE4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8A96B2447CEC9007F4AE4 /* HomeVC.swift */; };
@@ -21,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		202C5E6A2448954200D0691B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		202C5EA12448AC1400D0691B /* Addiction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Addiction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		202C5EA22448AC1400D0691B /* Addiction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Addiction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		202C5EA32448AC1400D0691B /* Trigger+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigger+CoreDataClass.swift"; sourceTree = "<group>"; };
+		202C5EA42448AC1400D0691B /* Trigger+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigger+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		202C5EA52448AC1400D0691B /* Relapse+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Relapse+CoreDataClass.swift"; sourceTree = "<group>"; };
+		202C5EA62448AC1400D0691B /* Relapse+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Relapse+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		20A8A9642447CEC9007F4AE4 /* Break Addiction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Break Addiction.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A8A9672447CEC9007F4AE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20A8A9692447CEC9007F4AE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +61,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		202C5E66244889C300D0691B /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				20A8A9752447CECB007F4AE4 /* Assets.xcassets */,
+				20A8A9772447CECB007F4AE4 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		202C5E67244889C600D0691B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20A8A96F2447CEC9007F4AE4 /* Main.storyboard */,
+				20A8A9692447CEC9007F4AE4 /* SceneDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		202C5E68244889C800D0691B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				202C5EA12448AC1400D0691B /* Addiction+CoreDataClass.swift */,
+				202C5EA32448AC1400D0691B /* Trigger+CoreDataClass.swift */,
+				202C5EA52448AC1400D0691B /* Relapse+CoreDataClass.swift */,
+				202C5EA02448ABD300D0691B /* CoreData Properties */,
+				20A8A9672447CEC9007F4AE4 /* AppDelegate.swift */,
+				202C5E6A2448954200D0691B /* CoreDataManager.swift */,
+				20A8A9722447CEC9007F4AE4 /* Break_Addiction.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		202C5E69244889CA00D0691B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				20A8A96B2447CEC9007F4AE4 /* HomeVC.swift */,
+				20A8A96D2447CEC9007F4AE4 /* RelapsesVC.swift */,
+				20A8A9952447D2C1007F4AE4 /* TriggersVC.swift */,
+				20A8A9972447D2D3007F4AE4 /* StatisticsVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		202C5EA02448ABD300D0691B /* CoreData Properties */ = {
+			isa = PBXGroup;
+			children = (
+				202C5EA22448AC1400D0691B /* Addiction+CoreDataProperties.swift */,
+				202C5EA42448AC1400D0691B /* Trigger+CoreDataProperties.swift */,
+				202C5EA62448AC1400D0691B /* Relapse+CoreDataProperties.swift */,
+			);
+			path = "CoreData Properties";
+			sourceTree = "<group>";
+		};
 		20A8A95B2447CEC9007F4AE4 = {
 			isa = PBXGroup;
 			children = (
@@ -67,17 +134,11 @@
 		20A8A9662447CEC9007F4AE4 /* Break Addiction */ = {
 			isa = PBXGroup;
 			children = (
-				20A8A9672447CEC9007F4AE4 /* AppDelegate.swift */,
-				20A8A9692447CEC9007F4AE4 /* SceneDelegate.swift */,
-				20A8A96B2447CEC9007F4AE4 /* HomeVC.swift */,
-				20A8A96D2447CEC9007F4AE4 /* RelapsesVC.swift */,
-				20A8A9952447D2C1007F4AE4 /* TriggersVC.swift */,
-				20A8A9972447D2D3007F4AE4 /* StatisticsVC.swift */,
-				20A8A96F2447CEC9007F4AE4 /* Main.storyboard */,
-				20A8A9752447CECB007F4AE4 /* Assets.xcassets */,
-				20A8A9772447CECB007F4AE4 /* LaunchScreen.storyboard */,
+				202C5E69244889CA00D0691B /* Controllers */,
+				202C5E68244889C800D0691B /* Model */,
+				202C5E67244889C600D0691B /* View */,
+				202C5E66244889C300D0691B /* Supporting files */,
 				20A8A97A2447CECB007F4AE4 /* Info.plist */,
-				20A8A9722447CEC9007F4AE4 /* Break_Addiction.xcdatamodeld */,
 			);
 			path = "Break Addiction";
 			sourceTree = "<group>";
@@ -154,12 +215,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202C5EA92448AC1400D0691B /* Trigger+CoreDataClass.swift in Sources */,
+				202C5EA72448AC1400D0691B /* Addiction+CoreDataClass.swift in Sources */,
 				20A8A96E2447CEC9007F4AE4 /* RelapsesVC.swift in Sources */,
 				20A8A9962447D2C1007F4AE4 /* TriggersVC.swift in Sources */,
+				202C5EAC2448AC1400D0691B /* Relapse+CoreDataProperties.swift in Sources */,
 				20A8A96C2447CEC9007F4AE4 /* HomeVC.swift in Sources */,
 				20A8A9682447CEC9007F4AE4 /* AppDelegate.swift in Sources */,
+				202C5EA82448AC1400D0691B /* Addiction+CoreDataProperties.swift in Sources */,
 				20A8A9982447D2D3007F4AE4 /* StatisticsVC.swift in Sources */,
+				202C5EAB2448AC1400D0691B /* Relapse+CoreDataClass.swift in Sources */,
+				202C5EAA2448AC1400D0691B /* Trigger+CoreDataProperties.swift in Sources */,
 				20A8A96A2447CEC9007F4AE4 /* SceneDelegate.swift in Sources */,
+				202C5E6B2448954200D0691B /* CoreDataManager.swift in Sources */,
 				20A8A9742447CEC9007F4AE4 /* Break_Addiction.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
