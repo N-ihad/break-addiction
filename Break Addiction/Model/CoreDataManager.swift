@@ -39,4 +39,16 @@ class CoreDataManager {
         }
     }
     
+    static func setAddiction(with name: String) {
+        let addiction = Addiction(context: context)
+        addiction.name = name
+        addiction.abstainingStartDate = Date()
+//        print(addiction.abstainingStartDate.description(with: .current))
+//        let formatter = DateFormatter()
+//        formatter.timeZone = TimeZone.current
+//        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+//        let dateString = formatter.string(from: addiction.abstainingStartDate)
+//        print(dateString)
+    }
+    
 }

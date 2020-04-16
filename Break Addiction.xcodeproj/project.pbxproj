@@ -14,6 +14,7 @@
 		202C5EAA2448AC1400D0691B /* Trigger+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EA42448AC1400D0691B /* Trigger+CoreDataProperties.swift */; };
 		202C5EAB2448AC1400D0691B /* Relapse+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EA52448AC1400D0691B /* Relapse+CoreDataClass.swift */; };
 		202C5EAC2448AC1400D0691B /* Relapse+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EA62448AC1400D0691B /* Relapse+CoreDataProperties.swift */; };
+		202C5EAF2448DD6F00D0691B /* SettingBadHabitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EAE2448DD6F00D0691B /* SettingBadHabitVC.swift */; };
 		20A8A9682447CEC9007F4AE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8A9672447CEC9007F4AE4 /* AppDelegate.swift */; };
 		20A8A96A2447CEC9007F4AE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8A9692447CEC9007F4AE4 /* SceneDelegate.swift */; };
 		20A8A96C2447CEC9007F4AE4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8A96B2447CEC9007F4AE4 /* HomeVC.swift */; };
@@ -35,6 +36,7 @@
 		202C5EA42448AC1400D0691B /* Trigger+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigger+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		202C5EA52448AC1400D0691B /* Relapse+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Relapse+CoreDataClass.swift"; sourceTree = "<group>"; };
 		202C5EA62448AC1400D0691B /* Relapse+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Relapse+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		202C5EAE2448DD6F00D0691B /* SettingBadHabitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBadHabitVC.swift; sourceTree = "<group>"; };
 		20A8A9642447CEC9007F4AE4 /* Break Addiction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Break Addiction.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A8A9672447CEC9007F4AE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20A8A9692447CEC9007F4AE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,12 +84,12 @@
 		202C5E68244889C800D0691B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				202C5E6A2448954200D0691B /* CoreDataManager.swift */,
 				202C5EA12448AC1400D0691B /* Addiction+CoreDataClass.swift */,
 				202C5EA32448AC1400D0691B /* Trigger+CoreDataClass.swift */,
 				202C5EA52448AC1400D0691B /* Relapse+CoreDataClass.swift */,
 				202C5EA02448ABD300D0691B /* CoreData Properties */,
 				20A8A9672447CEC9007F4AE4 /* AppDelegate.swift */,
-				202C5E6A2448954200D0691B /* CoreDataManager.swift */,
 				20A8A9722447CEC9007F4AE4 /* Break_Addiction.xcdatamodeld */,
 			);
 			path = Model;
@@ -96,7 +98,7 @@
 		202C5E69244889CA00D0691B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				20A8A96B2447CEC9007F4AE4 /* HomeVC.swift */,
+				202C5EAD2448DD2D00D0691B /* Home */,
 				20A8A96D2447CEC9007F4AE4 /* RelapsesVC.swift */,
 				20A8A9952447D2C1007F4AE4 /* TriggersVC.swift */,
 				20A8A9972447D2D3007F4AE4 /* StatisticsVC.swift */,
@@ -112,6 +114,15 @@
 				202C5EA62448AC1400D0691B /* Relapse+CoreDataProperties.swift */,
 			);
 			path = "CoreData Properties";
+			sourceTree = "<group>";
+		};
+		202C5EAD2448DD2D00D0691B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				20A8A96B2447CEC9007F4AE4 /* HomeVC.swift */,
+				202C5EAE2448DD6F00D0691B /* SettingBadHabitVC.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		20A8A95B2447CEC9007F4AE4 = {
@@ -226,6 +237,7 @@
 				20A8A9982447D2D3007F4AE4 /* StatisticsVC.swift in Sources */,
 				202C5EAB2448AC1400D0691B /* Relapse+CoreDataClass.swift in Sources */,
 				202C5EAA2448AC1400D0691B /* Trigger+CoreDataProperties.swift in Sources */,
+				202C5EAF2448DD6F00D0691B /* SettingBadHabitVC.swift in Sources */,
 				20A8A96A2447CEC9007F4AE4 /* SceneDelegate.swift in Sources */,
 				202C5E6B2448954200D0691B /* CoreDataManager.swift in Sources */,
 				20A8A9742447CEC9007F4AE4 /* Break_Addiction.xcdatamodeld in Sources */,
