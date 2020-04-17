@@ -51,4 +51,19 @@ class CoreDataManager {
 //        print(dateString)
     }
     
+    static func fetchAddictionEntity() -> Addiction? {
+        let fetchRequest = Addiction.notAmbiguousFetchRequest()
+        if let fetchedData = try? context.fetch(fetchRequest) {
+            if fetchedData.count > 0 {
+                return fetchedData[0]
+            } else {
+                print("Addiction has not been set yet")
+                return nil
+            }
+        } else {
+            print("Error fetching addiction")
+            return nil
+        }
+    }
+    
 }

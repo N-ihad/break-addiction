@@ -15,6 +15,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        if let loginController: SettingAddictionVC = storyboard.instantiateViewController(withIdentifier: "settingAddictionID")  as? SettingAddictionVC {
+//            print("entered here")
+//            loginController.modalPresentationStyle = .fullScreen
+//            self.window?.rootViewController?.present(loginController, animated: true, completion: nil)
+//        }
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -30,7 +36,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func sceneWillEnterForeground(_ scene: UIScene) {
-        
+
     }
     
     func sceneDidEnterBackground(_ scene: UIScene) {

@@ -29,8 +29,8 @@ extension RelapsesVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        cell.textLabel?.text = ""
-        cell.detailTextLabel?.text = ""
+        cell.textLabel?.text = people[indexPath.row]
+        cell.detailTextLabel?.text = "somedetail + \(indexPath)"
         return cell
     }
 }

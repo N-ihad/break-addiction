@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingBadHabitVC: UIViewController {
+class SettingAddictionVC: UIViewController {
     @IBOutlet weak var addictionTF: UITextField!
     
     override func viewDidLoad() {
@@ -20,7 +20,8 @@ class SettingBadHabitVC: UIViewController {
     
     @IBAction func readyButton(_ sender: UIButton) {
         CoreDataManager.setAddiction(with: addictionTF.text!)
-        _ = navigationController?.popViewController(animated: true)
+        (self.presentingViewController?.children[0].children[0] as! HomeVC).setUpAddiction()
+        dismiss(animated: true, completion: nil)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -28,9 +29,7 @@ class SettingBadHabitVC: UIViewController {
     }
 }
 
-
-
-extension SettingBadHabitVC: UITextFieldDelegate {
+extension SettingAddictionVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
