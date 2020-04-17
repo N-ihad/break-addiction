@@ -68,6 +68,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="p6W-kt-YNq" eventType="touchUpInside" id="svm-iS-Phl"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kqs-7E-KOE">
                                 <rect key="frame" x="0.0" y="128" width="375" height="216"/>
@@ -117,6 +120,7 @@
                     <connections>
                         <outlet property="placeTF" destination="W11-n3-GtL" id="VmR-TQ-CGM"/>
                         <outlet property="triggerTF" destination="I6t-fj-iaT" id="sbb-Rg-hzE"/>
+                        <outlet property="whenItHappenedDP" destination="Kqs-7E-KOE" id="eHg-gX-eK8"/>
                         <outlet property="whyItHappenedTF" destination="1yN-T5-f8D" id="WAK-CY-apu"/>
                     </connections>
                 </viewController>

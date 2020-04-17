@@ -13,7 +13,7 @@ import CoreData
 
 extension Addiction {
 
-    @nonobjc public class func notAmbiguousFetchRequest() -> NSFetchRequest<Addiction> {
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Addiction> {
         return NSFetchRequest<Addiction>(entityName: "Addiction")
     }
 

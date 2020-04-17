@@ -51,8 +51,27 @@ class CoreDataManager {
 //        print(dateString)
     }
     
+    static func relapsed(on date: Date, with trigger: String, _ place: String, and ownExplanation: String) {
+        if let addiction = fetchAddictionEntity() {
+            let trig = Trigger(context: context)
+            trig.name = trigger
+            
+            let relapse = Relapse(context: context)
+            relapse.trigger = trig
+            relapse.place = place
+            relapse.whyItHappened = ownExplanation
+            relapse.whenItHappened = date
+            
+            let difference = Calendar.current.dateComponents([.day, .hour, .minute], from: addiction.abstainingStartDate, to: Date())
+            relapse.streak = String(difference.day!) + " days " + String(difference.hour!) + " hours " + String(difference.minute!) + " minutes "
+            
+            addiction.relapses?.insert(relapse)
+            addiction.triggers?.insert(trig)
+        } else {print("Error accessing the database to add a relapse info")}
+    }
+    
     static func fetchAddictionEntity() -> Addiction? {
-        let fetchRequest = Addiction.notAmbiguousFetchRequest()
+        let fetchRequest: NSFetchRequest<Addiction> = Addiction.fetchRequest()
         if let fetchedData = try? context.fetch(fetchRequest) {
             if fetchedData.count > 0 {
                 return fetchedData[0]
