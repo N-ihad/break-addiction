@@ -9,10 +9,12 @@
 import UIKit
 
 class TriggerDetailsVC: UIViewController {
-
+    @IBOutlet weak var triggerNameL: UILabel!
+    var triggerDetails = TriggerDetails(name: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        triggerNameL.text = triggerDetails.name
     }
 }

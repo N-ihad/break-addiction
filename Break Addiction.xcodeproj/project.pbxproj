@@ -19,6 +19,10 @@
 		202C5EB9244A32E000D0691B /* RelapseDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EB8244A32E000D0691B /* RelapseDetailsVC.swift */; };
 		202C5EBB244A32FE00D0691B /* TriggerDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EBA244A32FE00D0691B /* TriggerDetailsVC.swift */; };
 		202C5EBD244A336200D0691B /* RelapsesVC_ExtTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EBC244A336200D0691B /* RelapsesVC_ExtTV.swift */; };
+		205504ED244A7CB80022FBEA /* TriggersVC_ExtTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205504EC244A7CB80022FBEA /* TriggersVC_ExtTV.swift */; };
+		205504EF244B2F7E0022FBEA /* TriggerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205504EE244B2F7E0022FBEA /* TriggerDetails.swift */; };
+		205504F1244B2F8B0022FBEA /* RelapseDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205504F0244B2F8B0022FBEA /* RelapseDetails.swift */; };
+		205504F3244B8BF00022FBEA /* DesignableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205504F2244B8BF00022FBEA /* DesignableExtensions.swift */; };
 		206933D9244A4A6F0006E5A9 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206933D8244A4A6F0006E5A9 /* IQKeyboardManagerSwift.framework */; };
 		20A8A9682447CEC9007F4AE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8A9672447CEC9007F4AE4 /* AppDelegate.swift */; };
 		20A8A96A2447CEC9007F4AE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8A9692447CEC9007F4AE4 /* SceneDelegate.swift */; };
@@ -47,6 +51,10 @@
 		202C5EB8244A32E000D0691B /* RelapseDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelapseDetailsVC.swift; sourceTree = "<group>"; };
 		202C5EBA244A32FE00D0691B /* TriggerDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerDetailsVC.swift; sourceTree = "<group>"; };
 		202C5EBC244A336200D0691B /* RelapsesVC_ExtTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelapsesVC_ExtTV.swift; sourceTree = "<group>"; };
+		205504EC244A7CB80022FBEA /* TriggersVC_ExtTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggersVC_ExtTV.swift; sourceTree = "<group>"; };
+		205504EE244B2F7E0022FBEA /* TriggerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerDetails.swift; sourceTree = "<group>"; };
+		205504F0244B2F8B0022FBEA /* RelapseDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelapseDetails.swift; sourceTree = "<group>"; };
+		205504F2244B8BF00022FBEA /* DesignableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableExtensions.swift; sourceTree = "<group>"; };
 		206933D4244A492E0006E5A9 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		206933D8244A4A6F0006E5A9 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A8A9642447CEC9007F4AE4 /* Break Addiction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Break Addiction.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +93,7 @@
 			children = (
 				20A8A9752447CECB007F4AE4 /* Assets.xcassets */,
 				20A8A9772447CECB007F4AE4 /* LaunchScreen.storyboard */,
+				205504F2244B8BF00022FBEA /* DesignableExtensions.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -108,6 +117,8 @@
 				202C5EA02448ABD300D0691B /* CoreData Properties */,
 				20A8A9672447CEC9007F4AE4 /* AppDelegate.swift */,
 				20A8A9722447CEC9007F4AE4 /* Break_Addiction.xcdatamodeld */,
+				205504EE244B2F7E0022FBEA /* TriggerDetails.swift */,
+				205504F0244B2F8B0022FBEA /* RelapseDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				20A8A9952447D2C1007F4AE4 /* TriggersVC.swift */,
+				205504EC244A7CB80022FBEA /* TriggersVC_ExtTV.swift */,
 				202C5EBA244A32FE00D0691B /* TriggerDetailsVC.swift */,
 			);
 			path = Triggers;
@@ -339,6 +351,8 @@
 				202C5EA92448AC1400D0691B /* Trigger+CoreDataClass.swift in Sources */,
 				202C5EA72448AC1400D0691B /* Addiction+CoreDataClass.swift in Sources */,
 				20A8A96E2447CEC9007F4AE4 /* RelapsesVC.swift in Sources */,
+				205504F1244B2F8B0022FBEA /* RelapseDetails.swift in Sources */,
+				205504F3244B8BF00022FBEA /* DesignableExtensions.swift in Sources */,
 				20A8A9962447D2C1007F4AE4 /* TriggersVC.swift in Sources */,
 				202C5EAC2448AC1400D0691B /* Relapse+CoreDataProperties.swift in Sources */,
 				20A8A96C2447CEC9007F4AE4 /* HomeVC.swift in Sources */,
@@ -347,7 +361,9 @@
 				20A8A9982447D2D3007F4AE4 /* StatisticsVC.swift in Sources */,
 				202C5EAB2448AC1400D0691B /* Relapse+CoreDataClass.swift in Sources */,
 				202C5EAA2448AC1400D0691B /* Trigger+CoreDataProperties.swift in Sources */,
+				205504ED244A7CB80022FBEA /* TriggersVC_ExtTV.swift in Sources */,
 				202C5EAF2448DD6F00D0691B /* SettingAddictionVC.swift in Sources */,
+				205504EF244B2F7E0022FBEA /* TriggerDetails.swift in Sources */,
 				20A8A96A2447CEC9007F4AE4 /* SceneDelegate.swift in Sources */,
 				202C5E6B2448954200D0691B /* CoreDataManager.swift in Sources */,
 				20A8A9742447CEC9007F4AE4 /* Break_Addiction.xcdatamodeld in Sources */,

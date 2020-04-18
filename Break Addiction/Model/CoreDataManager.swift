@@ -80,6 +80,7 @@ class CoreDataManager {
             relapse.streak = String(difference.day!) + " days " + String(difference.hour!) + " hours " + String(difference.minute!) + " minutes "
             
             addiction.relapses?.insert(relapse)
+            addiction.abstainingStartDate = Date()
             
         } else {print("Error accessing the database to add a relapse object")}
     }
@@ -105,9 +106,14 @@ class CoreDataManager {
             }
             return resultArray.sorted()
         } else {
-            print("Error accessing the database to get an array of trigger names for copying")
+            print("Error accessing the database to get an array of relapse dates for copying")
             return nil
         }
+    }
+    
+    static func deleteRelapse(relapseObj: Relapse) {
+        context.delete(relapseObj)
+        saveContext()
     }
     
     static func fetchAddictionEntity() -> Addiction? {

@@ -18,6 +18,17 @@ class HomeVC: UIViewController {
         setUpAddiction()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+//        if let addiction = CoreDataManager.fetchAddictionEntity() {
+//            print("AddictionAbstainingStartDate: \(CoreDataManager.convertDateToString(date: addiction.abstainingStartDate))\n")
+//            for everyEl in addiction.relapses! {
+//                print("Streak: \(everyEl.streak)")
+//            }
+//        }
+    }
+    
     func setUpAddiction() {
         if let addiction = CoreDataManager.fetchAddictionEntity() {
             addictionName.text = addiction.name

@@ -23,13 +23,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zx-ut-Xek">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zx-ut-Xek" customClass="DesignableButton" customModule="Break_Addiction" customModuleProvider="target">
                                 <rect key="frame" x="118" y="151" width="138" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94073837999999999" green="0.5571733713" blue="0.95922225709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Relapse">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="p6W-kt-YNq" kind="presentation" id="g7M-vQ-WE7"/>
                                 </connections>
@@ -224,9 +238,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Ioc-0D-vOl" kind="show" identifier="relapseDetailsSegue" id="BEr-7E-MUk"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -241,6 +252,7 @@
                     <navigationItem key="navigationItem" title="Relapses" id="n5r-d8-i1d"/>
                     <connections>
                         <outlet property="tableView" destination="fyR-gJ-ofS" id="hv9-x5-fSW"/>
+                        <segue destination="Ioc-0D-vOl" kind="show" identifier="relapseDetailsSegue" id="wqH-If-saF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -275,32 +287,44 @@
             </objects>
             <point key="canvasLocation" x="2680.8000000000002" y="-406.4039408866995"/>
         </scene>
-        <!--View Controller-->
+        <!--Trigger DetailsVC-->
         <scene sceneID="M3u-MX-KTE">
             <objects>
-                <viewController id="YU8-cS-QfN" sceneMemberID="viewController">
+                <viewController id="YU8-cS-QfN" customClass="TriggerDetailsVC" customModule="Break_Addiction" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="otm-M3-Njk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpo-0f-K8C">
+                                <rect key="frame" x="67" y="78" width="241" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="KWr-4b-oIc"/>
                     </view>
                     <navigationItem key="navigationItem" id="M8P-Ql-a3b"/>
+                    <connections>
+                        <outlet property="triggerNameL" destination="cpo-0f-K8C" id="ypC-eF-Flv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7a-0N-1Pc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2681" y="256"/>
+            <point key="canvasLocation" x="2680.8000000000002" y="255.66502463054189"/>
         </scene>
         <!--Triggers-->
         <scene sceneID="IuQ-uW-vp4">
             <objects>
                 <viewController id="xdQ-Wi-6ea" customClass="TriggersVC" customModule="Break_Addiction" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2V7-QN-dVs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PbQ-bR-RWJ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="5lU-q4-oUB">
@@ -310,9 +334,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="YU8-cS-QfN" kind="show" id="wzq-39-HCV"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -331,6 +352,10 @@
                         <viewLayoutGuide key="safeArea" id="g5r-am-iLo"/>
                     </view>
                     <navigationItem key="navigationItem" title="Triggers" id="wCv-j4-pr4"/>
+                    <connections>
+                        <outlet property="tableView" destination="PbQ-bR-RWJ" id="ucz-23-en0"/>
+                        <segue destination="YU8-cS-QfN" kind="show" identifier="triggerDetailsSegue" id="gEn-my-8sl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9w-OI-1D1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -400,7 +425,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="taK-CC-a45" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Triggers" image="lightbulb.fill" catalog="system" id="a5d-cR-Bfb"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="BLj-9q-47M">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BLj-9q-47M">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

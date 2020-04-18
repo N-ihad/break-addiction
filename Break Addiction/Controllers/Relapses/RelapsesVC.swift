@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import CoreData
 
 class RelapsesVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var tableData = [String]()
     var filteredTableData = [String]()
     var resultSearchController = UISearchController()
-    
+    var fetchedResultsController: NSFetchedResultsController<Relapse>! = NSFetchedResultsController<Relapse>()
+    struct RelapseDetails {
+        var date: String
+    }
+    var relapseDetails = RelapseDetails(date: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +28,8 @@ class RelapsesVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        resultSearchController.searchBar.isHidden = false;
         copyRelapseDatesToTableDataForSearching()
         updateTable()
     }
@@ -32,6 +39,11 @@ class RelapsesVC: UIViewController {
         if let vector = CoreDataManager.getArrayOfRelapseDates() {
             tableData = vector
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let rlpDetailsVC = segue.destination as! RelapseDetailsVC
+        rlpDetailsVC.relapseDetails.date = relapseDetails.date
     }
 }
 
@@ -58,6 +70,5 @@ extension RelapsesVC: UISearchResultsUpdating {
             tableView.tableHeaderView = controller.searchBar
             return controller
         })()
-        
     }
 }

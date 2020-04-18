@@ -10,11 +10,11 @@ import UIKit
 
 class RelapseDetailsVC: UIViewController {
     @IBOutlet weak var relapseDateL: UILabel!
-    
+    var relapseDetails = RelapseDetails(date: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        relapseDateL.text = CoreDataManager.convertDateToString(date: fetchedResultsController.object(at: indPath).whenItHappened)
+        relapseDateL.text = relapseDetails.date
     }
 }
