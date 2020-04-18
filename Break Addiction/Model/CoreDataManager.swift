@@ -51,13 +51,27 @@ class CoreDataManager {
 //        print(dateString)
     }
     
+    static func convertDateToString(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone.current
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        return formatter.string(from: date)
+    }
+    
     static func relapsed(on date: Date, with trigger: String, _ place: String, and ownExplanation: String) {
         if let addiction = fetchAddictionEntity() {
-            let trig = Trigger(context: context)
-            trig.name = trigger
-            
             let relapse = Relapse(context: context)
-            relapse.trigger = trig
+            let place = place.isEmpty ? nil : place
+            let ownExplanation = ownExplanation.isEmpty ? nil : ownExplanation
+            
+            
+            if !trigger.isEmpty {
+                let trig = Trigger(context: context)
+                trig.name = trigger
+                relapse.trigger = trig
+                addiction.triggers?.insert(trig)
+            }
+            
             relapse.place = place
             relapse.whyItHappened = ownExplanation
             relapse.whenItHappened = date
@@ -66,8 +80,34 @@ class CoreDataManager {
             relapse.streak = String(difference.day!) + " days " + String(difference.hour!) + " hours " + String(difference.minute!) + " minutes "
             
             addiction.relapses?.insert(relapse)
-            addiction.triggers?.insert(trig)
-        } else {print("Error accessing the database to add a relapse info")}
+            
+        } else {print("Error accessing the database to add a relapse object")}
+    }
+    
+    static func getArrayOfTriggerNames() -> [String]? {
+        if let addiction = fetchAddictionEntity() {
+            var resultArray = [String]()
+            for eachEl in addiction.triggers! {
+                resultArray.append(eachEl.name!)
+            }
+            return resultArray.sorted()
+        } else {
+            print("Error accessing the database to get an array of trigger names for copying")
+            return nil
+        }
+    }
+    
+    static func getArrayOfRelapseDates() -> [String]? {
+        if let addiction = fetchAddictionEntity() {
+            var resultArray = [String]()
+            for eachEl in addiction.relapses! {
+                resultArray.append(convertDateToString(date: eachEl.whenItHappened))
+            }
+            return resultArray.sorted()
+        } else {
+            print("Error accessing the database to get an array of trigger names for copying")
+            return nil
+        }
     }
     
     static func fetchAddictionEntity() -> Addiction? {

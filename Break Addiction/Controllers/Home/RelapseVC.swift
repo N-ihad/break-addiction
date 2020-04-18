@@ -48,15 +48,8 @@ class RelapseVC: UIViewController {
     }
     
     @IBAction func resetButton(_ sender: UIButton) {
-        print("When it happened: \(whenItHappened)")
-        print("Trigger: \(triggerTF.text!)")
-        print(triggerTF.text!.isEmpty)
-        print("Place: \(placeTF.text!)")
-        print(placeTF.text!.isEmpty)
-        if whyItHappenedTF.text!.contains("Why do you think it happened") { whyItHappenedTF.text = "" }
-        print("Why it happened: \(whyItHappenedTF.text!)")
-        print(whyItHappenedTF.text!.isEmpty)
         
+        if whyItHappenedTF.text!.contains("Why do you think it happened") { whyItHappenedTF.text = "" }
         // relapsed(on date: Date, with trigger: String, _ place: String, and ownExplanation: String)
         
         CoreDataManager.relapsed(on: whenItHappenedDP.date, with: triggerTF.text!, placeTF.text!, and: whyItHappenedTF.text!)

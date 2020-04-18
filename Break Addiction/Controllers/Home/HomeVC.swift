@@ -14,12 +14,14 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        isThereAddiction()
         setUpAddiction()
     }
     
     func setUpAddiction() {
         if let addiction = CoreDataManager.fetchAddictionEntity() {
             addictionName.text = addiction.name
+            
         }
     }
     

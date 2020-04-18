@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,10 @@
 		202C5EAC2448AC1400D0691B /* Relapse+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EA62448AC1400D0691B /* Relapse+CoreDataProperties.swift */; };
 		202C5EAF2448DD6F00D0691B /* SettingAddictionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EAE2448DD6F00D0691B /* SettingAddictionVC.swift */; };
 		202C5EB32449D43200D0691B /* RelapseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EB22449D43200D0691B /* RelapseVC.swift */; };
+		202C5EB9244A32E000D0691B /* RelapseDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EB8244A32E000D0691B /* RelapseDetailsVC.swift */; };
+		202C5EBB244A32FE00D0691B /* TriggerDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EBA244A32FE00D0691B /* TriggerDetailsVC.swift */; };
+		202C5EBD244A336200D0691B /* RelapsesVC_ExtTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C5EBC244A336200D0691B /* RelapsesVC_ExtTV.swift */; };
+		206933D9244A4A6F0006E5A9 /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206933D8244A4A6F0006E5A9 /* IQKeyboardManagerSwift.framework */; };
 		20A8A9682447CEC9007F4AE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8A9672447CEC9007F4AE4 /* AppDelegate.swift */; };
 		20A8A96A2447CEC9007F4AE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8A9692447CEC9007F4AE4 /* SceneDelegate.swift */; };
 		20A8A96C2447CEC9007F4AE4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8A96B2447CEC9007F4AE4 /* HomeVC.swift */; };
@@ -40,6 +44,11 @@
 		202C5EA62448AC1400D0691B /* Relapse+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Relapse+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		202C5EAE2448DD6F00D0691B /* SettingAddictionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAddictionVC.swift; sourceTree = "<group>"; };
 		202C5EB22449D43200D0691B /* RelapseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelapseVC.swift; sourceTree = "<group>"; };
+		202C5EB8244A32E000D0691B /* RelapseDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelapseDetailsVC.swift; sourceTree = "<group>"; };
+		202C5EBA244A32FE00D0691B /* TriggerDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerDetailsVC.swift; sourceTree = "<group>"; };
+		202C5EBC244A336200D0691B /* RelapsesVC_ExtTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelapsesVC_ExtTV.swift; sourceTree = "<group>"; };
+		206933D4244A492E0006E5A9 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		206933D8244A4A6F0006E5A9 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A8A9642447CEC9007F4AE4 /* Break Addiction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Break Addiction.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A8A9672447CEC9007F4AE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20A8A9692447CEC9007F4AE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206933D9244A4A6F0006E5A9 /* IQKeyboardManagerSwift.framework in Frameworks */,
 				5E4F312E6B47FB1B954A6387 /* Pods_Break_Addiction.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,9 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				202C5EAD2448DD2D00D0691B /* Home */,
-				20A8A96D2447CEC9007F4AE4 /* RelapsesVC.swift */,
-				20A8A9952447D2C1007F4AE4 /* TriggersVC.swift */,
-				20A8A9972447D2D3007F4AE4 /* StatisticsVC.swift */,
+				202C5EB6244A320C00D0691B /* Relapses */,
+				202C5EB7244A321D00D0691B /* Triggers */,
+				205504EB244A60140022FBEA /* Statistics */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -131,6 +141,33 @@
 				202C5EB22449D43200D0691B /* RelapseVC.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		202C5EB6244A320C00D0691B /* Relapses */ = {
+			isa = PBXGroup;
+			children = (
+				20A8A96D2447CEC9007F4AE4 /* RelapsesVC.swift */,
+				202C5EBC244A336200D0691B /* RelapsesVC_ExtTV.swift */,
+				202C5EB8244A32E000D0691B /* RelapseDetailsVC.swift */,
+			);
+			path = Relapses;
+			sourceTree = "<group>";
+		};
+		202C5EB7244A321D00D0691B /* Triggers */ = {
+			isa = PBXGroup;
+			children = (
+				20A8A9952447D2C1007F4AE4 /* TriggersVC.swift */,
+				202C5EBA244A32FE00D0691B /* TriggerDetailsVC.swift */,
+			);
+			path = Triggers;
+			sourceTree = "<group>";
+		};
+		205504EB244A60140022FBEA /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				20A8A9972447D2D3007F4AE4 /* StatisticsVC.swift */,
+			);
+			path = Statistics;
 			sourceTree = "<group>";
 		};
 		20A8A95B2447CEC9007F4AE4 = {
@@ -167,6 +204,8 @@
 		33224E75D725FEEAE62728A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				206933D8244A4A6F0006E5A9 /* IQKeyboardManagerSwift.framework */,
+				206933D4244A492E0006E5A9 /* IQKeyboardManagerSwift.framework */,
 				51F121F6E065731D94CA3E3B /* Pods_Break_Addiction.framework */,
 			);
 			name = Frameworks;
@@ -178,7 +217,6 @@
 				D5379CB1907712ACB0569606 /* Pods-Break Addiction.debug.xcconfig */,
 				28C55AF11057E2FFB2F72E08 /* Pods-Break Addiction.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -314,6 +352,9 @@
 				202C5E6B2448954200D0691B /* CoreDataManager.swift in Sources */,
 				20A8A9742447CEC9007F4AE4 /* Break_Addiction.xcdatamodeld in Sources */,
 				202C5EB32449D43200D0691B /* RelapseVC.swift in Sources */,
+				202C5EBD244A336200D0691B /* RelapsesVC_ExtTV.swift in Sources */,
+				202C5EBB244A32FE00D0691B /* TriggerDetailsVC.swift in Sources */,
+				202C5EB9244A32E000D0691B /* RelapseDetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +502,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8LSJ9NMNL;
 				INFOPLIST_FILE = "Break Addiction/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,6 +522,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8LSJ9NMNL;
 				INFOPLIST_FILE = "Break Addiction/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
